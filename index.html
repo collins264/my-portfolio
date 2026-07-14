@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obasi Collins | Web Developer Lagos</title>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+  body { font-family: 'Segoe UI', sans-serif; background: #0a0a0a; color: #fff; }
+  
+  nav { position: fixed; top: 0; width: 100%; background: rgba(10,10,10,0.95); padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid #D4AF37; }
+  nav .logo { font-size: 1.5rem; font-weight: bold; color: #D4AF37; }
+  nav a { color: #fff; text-decoration: none; margin: 0 15px; transition: 0.3s; }
+  nav a:hover { color: #D4AF37; }
+  
+  header { padding: 150px 50px 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+  .hero-text { flex: 1; min-width: 300px; }
+  .hero-text h1 { font-size: 3rem; color: #D4AF37; margin-bottom: 10px; }
+  .hero-text h2 { font-size: 1.3rem; color: #ccc; margin-bottom: 20px; }
+  .hero-text p { color: #aaa; line-height: 1.8; margin-bottom: 30px; }
+  .hero-img { flex: 1; text-align: center; min-width: 300px; }
+  .hero-img img { width: 280px; height: 280px; border-radius: 20px; border: 4px solid #D4AF37; object-fit: cover; }
+  
+  section { padding: 80px 50px; }
+  h1.section-title { text-align: center; font-size: 2.5rem; color: #D4AF37; margin-bottom: 50px; }
+  
+  .project { margin-bottom: 80px; padding: 30px; background: #111; border-radius: 15px; border: 1px solid #222; }
+  .project h2 { color: #D4AF37; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .project p { color: #aaa; margin-bottom: 20px; }
+  iframe { width: 100%; height: 500px; border: 2px solid #D4AF37; border-radius: 12px; }
+  
+  footer { padding: 50px; text-align: center; background: #000; border-top: 1px solid #D4AF37; }
+  .socials { display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; }
+  .socials a { color: #D4AF37; transition: 0.3s; }
+  .socials a:hover { color: #fff; transform: scale(1.2); }
+  .btn { padding: 15px 30px; background: #D4AF37; color: #000; text-decoration: none; font-weight: bold; border-radius: 8px; margin: 10px; display: inline-block; }
+  
+  @media(max-width: 768px) { nav { padding: 15px 20px; } header { padding: 120px 20px 50px; } section { padding: 50px 20px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">COLLINS</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header id="home">
+  <div class="hero-text">
+    <h1>COLLINS ONYEDIKACHI</h1>
+    <h2>Web Developer | Lagos, Nigeria</h2>
+    <p>I design and develop fast, modern, and responsive websites that help businesses grow online. From landing pages to e-commerce stores, I build digital experiences that convert visitors into customers.</p>
+    <a href="#projects" class="btn">View My Work</a>
+    <a href="mailto:collinsobasi02@gmail.com" class="btn">Hire Me</a>
+  </div>
+  <div class="hero-img">
+    <img src="https://raw.githubusercontent.com/collins264/my-portfolio/main/Collins.jpg" alt="Collins Onyedikachi">
+  </div>
+</header>
+
+<section id="projects">
+  <h1 class="section-title">My Projects</h1>
+  
+  <div class="project">
+    <h2><i data-lucide="scissors"></i> Wendy Luxury Hairs</h2>
+    <p>Luxury Wigs & Hair Extensions</p>
+    <iframe src="https://wendyhairs.netlify.app/"></iframe>
+  </div>
+
+  <div class="project">
+    <h2><i data-lucide="home"></i> Real Estate Properties</h2>
+    <p>Houses & Land Listings</p>
+    <iframe src="https://realestatesproperties.netlify.app/"></iframe>
+  </div>
+
+  <div class="project">
+    <h2><i data-lucide="shopping-bag"></i> King's Collections</h2>
+    <p>Shoes & Fashion</p>
+    <iframe src="https://kingscollections.netlify.app/"></iframe>
+  </div>
+
+  <div class="project">
+    <h2><i data-lucide="utensils"></i> Mama Blessing</h2>
+    <p>Food & Catering</p>
+    <iframe src="https://mamablessing.netlify.app/"></iframe>
+  </div>
+</section>
+
+<footer id="contact">
+  <h1 class="section-title">Let's Work Together</h1>
+  <div class="socials">
+    <a href="https://facebook.com/Collins Onyedikachi"><i data-lucide="facebook"></i></a>
+    <a href="https://twitter.com/collins"><i data-lucide="twitter"></i></a>
+    <a href="https://tiktok.com/@collins"><i data-lucide="music-4"></i></a>
+    <a href="mailto:collinsobasi02@gmail.com"><i data-lucide="mail"></i></a>
+  </div>
+  <a href="https://wa.me/2348139320756" class="btn">WhatsApp</a>
+  <a href="mailto:collinsobasi02@gmail.com" class="btn">Email</a>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>
