@@ -6,43 +6,62 @@
 <title>Obasi Collins | Web Developer Lagos</title>
 <script src="https://unpkg.com/lucide@latest"></script>
 <style>
+  :root {
+    --bg: #0a0a0a;
+    --card: #111111;
+    --text: #e0e0e0;
+    --muted: #999999;
+    --accent: #B8860B; /* Deep Gold / DarkGoldenrod - not bright */
+    --accent-hover: #DAA520; /* Lighter gold for hover */
+    --border: #2a2a2a;
+  }
+  
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-  body { font-family: 'Segoe UI', sans-serif; background: #0a0a0a; color: #fff; }
+  body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
   
-  nav { position: fixed; top: 0; width: 100%; background: rgba(10,10,10,0.95); padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid #D4AF37; }
-  nav .logo { font-size: 1.5rem; font-weight: bold; color: #D4AF37; }
-  nav a { color: #fff; text-decoration: none; margin: 0 15px; transition: 0.3s; }
-  nav a:hover { color: #D4AF37; }
+  nav { position: fixed; top: 0; width: 100%; background: rgba(10,10,10,0.95); backdrop-filter: blur(10px); padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid var(--accent); }
+  nav .logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); letter-spacing: 2px; }
+  nav a { color: var(--text); text-decoration: none; margin: 0 15px; transition: 0.3s; font-weight: 500; }
+  nav a:hover { color: var(--accent); }
   
-  header { padding: 150px 50px 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+  header { padding: 150px 50px 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; min-height: 80vh; }
   .hero-text { flex: 1; min-width: 300px; }
-  .hero-text h1 { font-size: 3rem; color: #D4AF37; margin-bottom: 10px; }
-  .hero-text h2 { font-size: 1.3rem; color: #ccc; margin-bottom: 20px; }
-  .hero-text p { color: #aaa; line-height: 1.8; margin-bottom: 30px; }
+  .hero-text h1 { font-size: 3rem; color: var(--accent); margin-bottom: 10px; }
+  .hero-text h2 { font-size: 1.3rem; color: var(--muted); margin-bottom: 20px; }
+  .hero-text p { color: var(--muted); line-height: 1.8; margin-bottom: 30px; font-size: 1.1rem; }
   .hero-img { flex: 1; text-align: center; min-width: 300px; }
-  .hero-img img { width: 280px; height: 280px; border-radius: 20px; border: 4px solid #D4AF37; object-fit: cover; }
+  .hero-img img { width: 280px; height: 280px; border-radius: 20px; border: 3px solid var(--accent); object-fit: cover; box-shadow: 0 0 30px rgba(184,134,11,0.2); }
   
   section { padding: 80px 50px; }
-  h1.section-title { text-align: center; font-size: 2.5rem; color: #D4AF37; margin-bottom: 50px; }
+  h1.section-title { text-align: center; font-size: 2.5rem; color: var(--accent); margin-bottom: 50px; }
   
-  .project { margin-bottom: 80px; padding: 30px; background: #111; border-radius: 15px; border: 1px solid #222; }
-  .project h2 { color: #D4AF37; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-  .project p { color: #aaa; margin-bottom: 20px; }
-  iframe { width: 100%; height: 500px; border: 2px solid #D4AF37; border-radius: 12px; }
+  .project { margin-bottom: 80px; padding: 30px; background: var(--card); border-radius: 15px; border: 1px solid var(--border); transition: 0.3s; }
+  .project:hover { border-color: var(--accent); transform: translateY(-5px); }
+  .project h2 { color: var(--accent); display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 1.5rem; }
+  .project p { color: var(--muted); margin-bottom: 20px; }
+  iframe { width: 100%; height: 500px; border: 2px solid var(--border); border-radius: 12px; transition: 0.3s; }
+  iframe:hover { border-color: var(--accent); }
   
-  footer { padding: 50px; text-align: center; background: #000; border-top: 1px solid #D4AF37; }
-  .socials { display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; }
-  .socials a { color: #D4AF37; transition: 0.3s; }
-  .socials a:hover { color: #fff; transform: scale(1.2); }
-  .btn { padding: 15px 30px; background: #D4AF37; color: #000; text-decoration: none; font-weight: bold; border-radius: 8px; margin: 10px; display: inline-block; }
+  footer { padding: 60px 50px; text-align: center; background: #000; border-top: 1px solid var(--accent); }
+  .socials { display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; flex-wrap: wrap; }
+  .socials a { color: var(--accent); transition: 0.3s; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+  .socials a:hover { color: var(--accent-hover); transform: translateY(-3px); }
+  .btn { padding: 15px 30px; background: var(--accent); color: #000; text-decoration: none; font-weight: bold; border-radius: 8px; margin: 10px; display: inline-block; transition: 0.3s; }
+  .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+  .copyright { color: var(--muted); margin-top: 30px; font-size: 0.9rem; }
   
-  @media(max-width: 768px) { nav { padding: 15px 20px; } header { padding: 120px 20px 50px; } section { padding: 50px 20px; } }
+  @media(max-width: 768px) { 
+    nav { padding: 15px 20px; } 
+    header { padding: 120px 20px 50px; } 
+    section { padding: 50px 20px; } 
+    .hero-text h1 { font-size: 2.2rem; }
+  }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">COLLINS</div>
+  <div class="logo">OBASI COLLINS</div>
   <div>
     <a href="#home">Home</a>
     <a href="#projects">Projects</a>
@@ -52,14 +71,14 @@
 
 <header id="home">
   <div class="hero-text">
-    <h1>COLLINS ONYEDIKACHI</h1>
+    <h1>OBASI COLLINS</h1>
     <h2>Web Developer | Lagos, Nigeria</h2>
     <p>I design and develop fast, modern, and responsive websites that help businesses grow online. From landing pages to e-commerce stores, I build digital experiences that convert visitors into customers.</p>
     <a href="#projects" class="btn">View My Work</a>
     <a href="mailto:collinsobasi02@gmail.com" class="btn">Hire Me</a>
   </div>
   <div class="hero-img">
-    <img src="https://raw.githubusercontent.com/collins264/my-portfolio/main/Collins.jpg" alt="Collins Onyedikachi">
+    <img src="https://raw.githubusercontent.com/collins264/my-portfolio/main/Collins.jpg" alt="Obasi Collins">
   </div>
 </header>
 
@@ -94,13 +113,14 @@
 <footer id="contact">
   <h1 class="section-title">Let's Work Together</h1>
   <div class="socials">
-    <a href="https://facebook.com/Collins Onyedikachi"><i data-lucide="facebook"></i></a>
-    <a href="https://twitter.com/collins"><i data-lucide="twitter"></i></a>
-    <a href="https://tiktok.com/@collins"><i data-lucide="music-4"></i></a>
-    <a href="mailto:collinsobasi02@gmail.com"><i data-lucide="mail"></i></a>
+    <a href="https://facebook.com/collins onyedikachi" target="_blank"><i data-lucide="facebook"></i> Facebook</a>
+    <a href="https://twitter.com/collins" target="_blank"><i data-lucide="twitter"></i> Twitter</a>
+    <a href="https://tiktok.com/@collins" target="_blank"><i data-lucide="music-4"></i> TikTok</a>
+    <a href="mailto:collinsobasi02@gmail.com"><i data-lucide="mail"></i> Email</a>
   </div>
-  <a href="https://wa.me/2348139320756" class="btn">WhatsApp</a>
-  <a href="mailto:collinsobasi02@gmail.com" class="btn">Email</a>
+  <a href="https://wa.me/2348139320756" class="btn">WhatsApp Me</a>
+  <a href="mailto:collinsobasi02@gmail.com" class="btn">Email Me</a>
+  <p class="copyright">© 2026 Obasi Collins. All Rights Reserved.</p>
 </footer>
 
 <script>lucide.createIcons();</script>
